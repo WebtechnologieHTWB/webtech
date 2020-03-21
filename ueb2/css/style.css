@@ -1,0 +1,142 @@
+body {
+	background-color: #ffff00;
+}
+
+h1.ueberschrift {
+		color: #ff0000;
+		font-size: 4.4em;
+		font-variant: small-caps;
+		text-align: center;
+		font-family: fantasy;
+		letter-spacing: 0.5em;
+}
+
+h1.schach {
+	color: red;
+	font-size: 2.4em;
+	text-align: center;
+}
+
+div.haupttext {
+	color: #0000ff;
+	text-align: justify;
+	font-size: 1em;
+	margin-left: 12.5%;
+	margin-right: 12.5%;
+	font-family: Palatino Linotype;
+}
+
+div.einkauf {
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 0.125em;
+	color: #1111ff;
+	line-height: 2.25em;
+	font-weight: bolder;
+}
+
+img.schachbrett {
+	height: 70%;
+	width: 90%;
+	display: block;
+	box-sizing: border-box;
+	margin: 1em auto; 
+	border: 1px solid green;
+}
+
+img.stopeatanimals {
+	height: 75%;
+	width: 50%;
+	display: block;
+	box-sizing: border-box;
+	margin: 1em auto; 
+	border: 1px solid green;
+}
+
+img.zettel {
+	height: 50%;
+	width: 12.5%;
+	display: block;
+	box-sizing: border-box;
+	margin: 1em auto; 
+	border: 1px solid green;
+}
+
+a.schachbrett {
+	font-family: monospace;
+	font-size: 1.75em;
+	letter-spacing: 0.25em;
+}
+
+/* unvisited link */
+a:link.schachbrett {
+  color: red;
+}
+
+/* visited link */
+a:visited.schachbrett {
+  color: green;
+}
+
+/* mouse over link */
+a:hover.schachbrett {
+  color: hotpink;
+}
+
+/* selected link */
+a:active.schachbrett {
+  color: blue;
+}
+
+p.gedicht {
+	line-height: 1.5em;
+}
+
+br.gedicht {
+	line-height: 2em;
+}
+
+figure.schachbrett {
+  text-align: center; 
+}
+
+figcaption.schachbrett {
+  display: inline-block; 
+  text-align: left;
+}
+
+div.index {
+	margin: center;
+	text-align: center;
+}
+
+td.index {
+	-font-size: 42px;
+}
+
+/* unvisited link */
+a:link.index {
+  color: red;
+	font-size: 42px;
+}
+
+/* visited link */
+a:visited.index {
+  color: black;
+	font-size: 42px;
+}
+
+/* mouse over link */
+a:hover.index {
+  color: brown;
+	font-size: 42px;
+}
+
+/* selected link */
+a:active.index {
+  color: purple;
+	font-size: 42px;
+}
+
+mark.ausschnitt {
+	background-color:skyblue;
+}

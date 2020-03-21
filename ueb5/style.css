@@ -1,0 +1,21 @@
+.complete {
+    width: 50%;
+    /*border: 1px solid;*/
+    font-size: 12px;
+    font-family: "/only screen and (min-width:64.063em)/";
+}
+.headline {
+    font-family: "Arial Black";
+}
+.inputField {
+    font-size: 12px;
+    font-family: "/only screen and (min-width:64.063em)/";
+}
+#divError {
+    width: 75%;
+    visibility: hidden;
+    text-align: left;
+    font-size: 12px;
+    font-family: "Consolas", "Menlo", "Courier", monospace;
+    color: #ff0000;
+}

@@ -1,0 +1,29 @@
+body {
+	background-color: #ffff00;
+}
+
+h1.schach {
+	color: red;
+	font-size: 2.4em;
+	text-align: center;
+}
+
+table.schach {
+	border-color: #ff0000;
+	border: 1px;
+	border-style: dotted solid double dashed;
+}
+
+td {
+	width: 50px;
+	height: 50px;
+	background: white;
+}
+
+tr:nth-child(2n) td:nth-child(2n) {
+	background: black;
+}
+
+tr:nth-child(2n+1) td:nth-child(2n+1) {
+	background: black;
+}
