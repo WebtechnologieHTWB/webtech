@@ -5,10 +5,10 @@ function answer(id,x){
      var zufahl=Math.floor(Math.random() * (max1 - min1 + 1)) + min1;
 		
 	if(id==auto){
-	     document.getElementById(id).src='../bilder/auto.jpg';
+	     document.getElementById(id).src='/pic/auto.jpg';
 		
 	}else{
-		document.getElementById(id).src='../bilder/ziege.jpg';
+		document.getElementById(id).src='/pic/ziege.jpg';
 	}
 	
 }

@@ -3,15 +3,15 @@
 <body>
 <h2>The XMLHttpRequest Object</h2>
 
-<img id="0" src="../bilder/door.jpg" onclick="answer(id,x);">
+<img id="0" src="/pic/door.jpg" onclick="answer(id,x);">
 
 
 
-<img id="1" src="../bilder/door.jpg" onclick="answer(id,x);">
+<img id="1" src="/pic/door.jpg" onclick="answer(id,x);">
 
 
 
-<img  id="2" src="../bilder/door.jpg" onclick="answer(id,x);" >
+<img  id="2" src="/pic/door.jpg" onclick="answer(id,x);" >
 
 
 
@@ -31,9 +31,9 @@ function answer(id,x){
    var zufahl=Math.floor(Math.random() * (max - min + 1)) + min;
 	if(id=='0'){	
 	     if(zufahl==0){
-	     document.getElementById('2').src='../bilder/door1.jpg';
+	     document.getElementById('2').src='/pic/door1.jpg';
 		 }else{
-			  document.getElementById('1').src='../bilder/door1.jpg';
+			  document.getElementById('1').src='/pic/door1.jpg';
 		 }
 	}
 	answer1(id,x);
@@ -45,24 +45,24 @@ var min = 0, max = 1;
 
 	if(id==auto){	
            if(id==0)  {   
-	     document.getElementById(0).src='../bilder/auto.jpg';
+	     document.getElementById(0).src='/pic/auto.jpg';
 		
 		}else if(id==1){
-			  document.getElementById(1).src='../bilder/auto.jpg';
+			  document.getElementById(1).src='/pic/auto.jpg';
 			
 		 }else if(id==2){
-			 document.getElementById(2).src='../bilder/auto.jpg';
+			 document.getElementById(2).src='/pic/auto.jpg';
 			
 		 }
 	}else if(id!=auto){
 		 if(id==0)  {   
-	     document.getElementById(0).src='../bilder/ziege.jpg';
+	     document.getElementById(0).src='/pic/ziege.jpg';
 	
 		}else if(id==1){
-			  document.getElementById(1).src='../bilder/ziege.jpg';
+			  document.getElementById(1).src='/pic/ziege.jpg';
 			loadDoc();
 		 }else if(id==2){
-			 document.getElementById(2).src='../bilder/ziege.jpg';
+			 document.getElementById(2).src='/pic/ziege.jpg';
 			loadDoc();
 		 }
 	}

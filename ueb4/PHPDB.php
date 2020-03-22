@@ -4,7 +4,7 @@ include_once('./idatabase.php');
 
 class PHPDB implements idatabase{ 
 	
-        public $filename = "C:\\xampp\\htdocs\\Aufgabe4\\TableContents.txt";
+        public $filename = "\\TableContents.txt";
         public $fileContent;
         
         
@@ -17,8 +17,8 @@ class PHPDB implements idatabase{
                 "2" =>array('productname'=>'milk','price'=>0.79,'category'=>'dairy products'),
                 "3" =>array('productname'=>'strawberry-cheesecake','price'=>32.75,'category'=>'confectionery products'),
                 "4" =>array('productname'=>'orange juice','price'=>3.49,'category'=>'drink'),
-                "5" =>array('productname'=>'orange juice','price'=>3.49,'category'=>'drink'),
-                "6" =>array('productname'=>'orange juice','price'=>3.49,'category'=>'drink'));
+                "5" =>array('productname'=>'cherry-banana juice','price'=>2.49,'category'=>'drink'),
+                "6" =>array('productname'=>'apple juice','price'=>1.49,'category'=>'drink'));
                         
                 $file = fopen($this->filename, "w") or die("Unable to open file.");
                 fwrite($file, serialize($this->fileContent));
@@ -32,10 +32,10 @@ class PHPDB implements idatabase{
         }
         
         
-        public function insert(string $article_name, float $price_euro, int $amount){
+        public function insert(string $productname, float $price, string $category){
     
-            if (!(in_array($article_name, $this->fileContent))) {
-                array_push($this->fileContent,array('article_name'=>$article_name,'price_euro'=>$price_euro,'amount'=>$amount));
+            if (!(in_array($productname, $this->fileContent))) {
+                array_push($this->fileContent,array('$productname'=>$productname,'price'=>$price,'category'=>$category));
                 echo "Article inserted  ";
             }
             else {
@@ -48,7 +48,7 @@ class PHPDB implements idatabase{
             try {
                 foreach ($this->fileContent as $row) {
                     if(in_array($string, $row)) { 
-                        echo "  Query result( article: ".$row['article_name']."  price: ".$row['price_euro']."  amount: ".$row['amount'].") ";
+                        echo "  Query result( article: ".$row['$productname']."  price: ".$row['price']."  category: ".$row['category'].") ";
                      }
                 }
             }

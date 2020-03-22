@@ -1,19 +1,21 @@
 
-CREATE DATABASE IF NOT EXISTS Aufgabe4 CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE Aufgabe4;
+CREATE DATABASE IF NOT EXISTS gruppe5 CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE gruppe5;
 
-CREATE TABLE IF NOT EXISTS shopping_list(
-	article_id int(7) NOT NULL AUTO_INCREMENT,
-	article_name varchar(50) NOT NULL,
-	price_euro FLOAT NOT NULL,
-	amount integer NOT NULL,
-	PRIMARY KEY(article_id)
-)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS goods(
+		id int(8) NOT NULL AUTO_INCREMENT,
+		productname varchar(64) NOT NULL,
+		price FLOAT NOT NULL,
+		category integer NOT NULL,
+		PRIMARY KEY(id)
+	)
+	ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO shopping_list (article_name, price_euro, amount) VALUES
-	('bananas', '0.92', '4'),
-	('apples', '3.24', '9'),
-        ('oranges', '2.93', '5'),
-        ('pears', '3.45', '4');
-        
+INSERT INTO goods (productname, price, category) VALUES
+	('butter', '1.79', 'dairy products'),
+	('milk', '0.79', 'dairy products'),
+    ('strawberry-cheesecake', '32.75', 'confectionery products'),
+	('orange juice', '3.49', 'drink'),
+	('cherry-banana juice', '2.49', 'drink'),
+	('apple juice', '1.49', 'drink');

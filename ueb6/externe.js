@@ -13,16 +13,16 @@ function answer(id,x){
 	case 0:   
         if(id==0){	
 		
-     	if(zufahl==0){document.getElementById('2').src='../bilder/ziege.jpg';}
-		 else{ document.getElementById('1').src='../bilder/ziege.jpg';}
+     	if(zufahl==0){document.getElementById('2').src='/pic/ziege.jpg';}
+		 else{ document.getElementById('1').src='/pic/ziege.jpg';}
 	
 	    }else if(id==1){
-		 if(zufahl==0){document.getElementById('0').src='../bilder/ziege.jpg';}
-		 else{document.getElementById('2').src='../bilder/ziege.jpg';}
+		 if(zufahl==0){document.getElementById('0').src='/pic/ziege.jpg';}
+		 else{document.getElementById('2').src='/pic/ziege.jpg';}
 		
 	    }else if(id==2){
-		if(zufahl==0){ document.getElementById('1').src='../bilder/ziege.jpg';}
-		else{ document.getElementById('0').src='../bilder/ziege.jpg';}
+		if(zufahl==0){ document.getElementById('1').src='/pic/ziege.jpg';}
+		else{ document.getElementById('0').src='/pic/ziege.jpg';}
 		 
 		}
 		
@@ -30,14 +30,14 @@ function answer(id,x){
 		   break;
 	case 1: 
 	                 if(id==auto){
-                 if(id==0){document.getElementById('0').src='../bilder/auto.jpg';}
-                 else if(id==1){document.getElementById('1').src='../bilder/auto.jpg';}
-                 else if(id==2){document.getElementById('2').src='../bilder/auto.jpg';}
+                 if(id==0){document.getElementById('0').src='/pic/auto.jpg';}
+                 else if(id==1){document.getElementById('1').src='/pic/auto.jpg';}
+                 else if(id==2){document.getElementById('2').src='/pic/auto.jpg';}
 				  
 		               }else if(id!=auto){
-				      if(id==0){document.getElementById('0').src='../bilder/ziege.jpg';}
-                 else if(id==1){document.getElementById('1').src='../bilder/ziege.jpg';}
-                 else if(id==2){document.getElementById('2').src='../bilder/ziege.jpg';} 
+				      if(id==0){document.getElementById('0').src='/pic/ziege.jpg';}
+                 else if(id==1){document.getElementById('1').src='/pic/ziege.jpg';}
+                 else if(id==2){document.getElementById('2').src='/pic/ziege.jpg';} 
 				
 					   }
 		   v++;
@@ -50,9 +50,9 @@ function answer(id,x){
 function loadDoc(){
 	v=0;
 	
-	document.getElementById('0').src='../bilder/door.jpg';
-	document.getElementById('1').src='../bilder/door.jpg';
-	document.getElementById('2').src='../bilder/door.jpg';
+	document.getElementById('0').src='/pic/door.jpg';
+	document.getElementById('1').src='/pic/door.jpg';
+	document.getElementById('2').src='/pic/door.jpg';
 	
 	answer(id,x);
 }

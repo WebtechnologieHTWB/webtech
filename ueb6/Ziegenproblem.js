@@ -14,7 +14,7 @@ function set_up(){
         gameStatus=1;
         
 	for(var i=0;i<3;i++){
-		document.getElementsByTagName('img')[i].src="../bilder/door.jpg";
+		document.getElementsByTagName('img')[i].src="/pic/door.jpg";
 	}	
         
         var xhttp;
@@ -79,7 +79,7 @@ function firstRequest(xhttp,door_id){
 		if (this.readyState == 4 && this.status == 200) {
                     
                     goatDoor = Number(this.responseText); 
-                    document.getElementsByTagName('img')[goatDoor].src="../bilder/ziege.jpg";
+                    document.getElementsByTagName('img')[goatDoor].src="/pic/ziege.jpg";
                     document.getElementById('playerChoice').innerHTML = "";
                     document.getElementById("playerChoice").innerHTML = "You chose door " + (Number(door_id)+1) +"<br> Do you wish to change your choice?";
                     doorStatus[goatDoor] = false;
@@ -103,22 +103,22 @@ function secondRequest(xhttp,door_id,firstGoatDoor){
                     if(result==1){
                         document.getElementById('playerChoice').innerHTML = "";
                         document.getElementById("playerChoice").innerHTML = "You won!";
-                        document.getElementsByTagName('img')[door_id].src="../bilder/Auto.jpg";
+                        document.getElementsByTagName('img')[door_id].src="/pic/Auto.jpg";
                         doorStatus[door_id]=false;
                         for(var i=0;i<3;i++){
                             if(doorStatus[i]==true){
-                                 document.getElementsByTagName('img')[i].src="../bilder/Auto.jpg";
+                                 document.getElementsByTagName('img')[i].src="/pic/Auto.jpg";
                             }
                         } 
                     }
                     else{
                         document.getElementById('playerChoice').innerHTML = "";
                         document.getElementById("playerChoice").innerHTML = "You lost :(";
-                        document.getElementsByTagName('img')[door_id].src="../bilder/ziege.jpg";
+                        document.getElementsByTagName('img')[door_id].src="/pic/ziege.jpg";
                         doorStatus[door_id]=false;
                         for(var i=0;i<3;i++){
                             if(doorStatus[i]==true){
-                                document.getElementsByTagName('img')[i].src="../bilder/Auto.jpg";
+                                document.getElementsByTagName('img')[i].src="/pic/Auto.jpg";
                         } 
                     }
 		}
