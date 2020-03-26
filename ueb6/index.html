@@ -1,22 +1,29 @@
-﻿<html>
-<!DOCTYPE html>
-<meta name="language" content="de,at,ch">
-<meta charset="utf-8">
-<script src="main.js"></script>
+﻿<!DOCTYPE html>
+<html>
 <head>
-
+    <meta name="language" content="de,at,ch">
+    <meta charset="utf-8">
+    <script src="main.js"></script>
+    <meta name="author" content="Oezdemir Ceyda, Dustin Eikmeier">
+    <meta name="describtion" content="Excercise 2 from Webtechnologie from Wirtschaftsinformatik Bachelor Semester 3 WiSe19/20">
+    <meta name="keywords" lang="de" content="index, schach, schachbrett, kauf, einkauf, liste, gedicht, ausschnitt">
+    <meta name="language" content="de,at">
+    <meta name="expires" content="never">
+    <meta name="revisit-after" content="1 days">
+    <meta name="robots" content="index,follow">
+    <meta http-equiv="refresh" content="20">
 </head>
 <body>
-    <img id="0" src="pic/door.jpg" onclick="answer(id,x);">
+    <img id="0" src="./pic/door.jpg" onclick="answer(id,x);">
 
 
 
 
-    <img id="1" src="pic/door.jpg" onclick="answer(id,x);">
+    <img id="1" src="./pic/door.jpg" onclick="answer(id,x);">
 
 
 
-    <img id="2" src="pic/door.jpg" onclick="answer(id,x);">
+    <img id="2" src="./pic/door.jpg" onclick="answer(id,x);">
 
 
     <div>
@@ -24,12 +31,17 @@
     </div>
 
     <div>
-        <button type="button">beenden</button>
+        <button type="button">Beenden</button>
     </div>
 
-    <div id="text">
-        <p>Zwischenstand: </p>
+    <button type="button" id="button1" onclick="set_up();">New Game</button>
+    <button type="button" id="button2" onclick="end_game();">End</button>
+    <div id="playerChoice">
     </div>
+    <div id="serverChoice">
+    </div>
+
+    <strong><label for="score">Score: </label></strong><div id="score"></div>
 </body>
 </html>
 
