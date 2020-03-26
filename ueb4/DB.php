@@ -3,19 +3,19 @@ declare(strict_types=1);
 include_once('./idatabase.php');
 
 class DB implements idatabase{
-	
+	/*
     public $database = null;
     public $servername;
     public $dbname;
 	public $username;
-	public $passwort;
+	public $passwort;*/
 
         
-	public function construct(string $dbservername,string $dbname,string $dbusername,string $dbpassword){
-            $this->servername = $dbservername;
+	public function __construct(string $servername,string $dbname,string $username,string $password){
+            $this->servername = $servername;
             $this->dbname = $dbname;
-            $this->username = $dbusername;
-            $this->password = $dbpassword;
+            $this->username = $username;
+            $this->password = $password;
 	}
 	
 	public function open(){
@@ -28,10 +28,13 @@ class DB implements idatabase{
             }
 			catch(PDOException $exeption){
                 echo('Connection failed '.$exeption -> getMessage());			
+            }    
+            catch(Exception $exception){
+                echo 'Connection failed '.$exception -> getMessage();
             }
 	}
 	
-	public function insert(string $productname,float $price, string $category){
+	public function insert(string $productname, float $price, string $category){
             try{
 				$sql = "INSERT INTO goods ($productname, $price, $category) VALUES(?,?,?)";
 				$statement = $this->database-> prepare($sql);
@@ -44,6 +47,9 @@ class DB implements idatabase{
             }
 			catch(PDOException $exeption){
                 echo('Insert failed '.$exeption->getMessage());			
+            }    
+            catch(Exception $exception){
+                echo 'Insert failed '.$exception -> getMessage();
             }
 	}
 	
@@ -59,6 +65,9 @@ class DB implements idatabase{
             }
 			catch(PDOException $exeption){
                 echo ('Select statement failed '.$exeption->getMessage());			
+            }    
+            catch(Exception $exception){
+                echo 'Select statement failed '.$exception -> getMessage();
             }
 	}
 	
@@ -71,6 +80,9 @@ class DB implements idatabase{
                 
             }catch(PDOException $exeption){
 		echo('Deletion failed '.$exeption->getMessage());			
+            }    
+            catch(Exception $exception){
+                echo 'Deletion failed '.$exception -> getMessage();
             }
 	}
 	
@@ -81,6 +93,9 @@ class DB implements idatabase{
                 
             }catch(PDOException $exeption){
 		echo('Closing database failed '.$exeption->getMessage());			
+	}    
+	catch(Exception $exception){
+		echo 'Closing database failed '.$exception -> getMessage();
 	}
     }
 } 

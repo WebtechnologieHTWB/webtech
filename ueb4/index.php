@@ -2,36 +2,42 @@
 $servername = "127.0.0.1";
 $username = "root";
 $password = "";
-$dbname = "ue4";
+$dbname = "gruppe5";
 
 include "DB.php";
 include "PHPDB.php";
 
+echo "<p><h1>EINS</h1></p>";
+
 $dbTxt=new PHPDB($servername, $dbname, $username, $password);
 $dbTxt->open();
-$dbTxt->insert('plumbus','4.30','17');
-$dbTxt->query('productname','bananas');
-$dbTxt->delete('productname','plums');
-$dbTxt->close();
+$dbTxt->insert('plumbus',49.75,'household item'); echo "<br>";
+$dbTxt->query('productname','plumbus'); echo "<br>";
+$dbTxt->delete('productname','plumbus'); echo "<br>";
+$dbTxt->close(); echo "<br>";
 
+echo "<p><h1>ZWEI</h1></p>";
 
 $dbTxt->open();
-$dbTxt->insert('avodados','2.10','1');
-$dbTxt->query('productname','oranges');
-$dbTxt->delete('productname','oranges');
-$dbTxt->close();
+$dbTxt->insert('monchichi',19.89,'dolly'); echo "<br>";
+$dbTxt->query('productname','monchichi'); echo "<br>";
+$dbTxt->delete('productname','monchichi'); echo "<br>";
+$dbTxt->close(); echo "<br>";
 
+echo "<p><h1>DREI</h1></p>";
 
-$sql=new PHPDB($servername, $dbname, $username, $password);
+$sql=new DB($servername, $dbname, $username, $password); echo "<br>";
 $sql->open();
-$sql->insert('plums','4.30','17');
-$sql->query('productname', 'bananas');
-$sql->delete('productname', 'plums');
-$sql->close();
+$sql->insert('plumbus',49.75,'household item'); echo "<br>";
+$sql->query('productname', 'plumbus'); echo "<br>";
+$sql->delete('productname', 'plumbus'); echo "<br>";
+$sql->close(); echo "<br>";
+
+echo "<p><h1>VIER</h1></p>";
 
 $sql->open();
-$sql->insert('avodados','2.10','1');
-$sql->query('productname', 'oranges');
-$sql->delete('productname', 'oranges');
-$sql->close();
+$sql->insert('monchichi',19.89,'dolly'); echo "<br>";
+$sql->query('productname', 'monchichi'); echo "<br>";
+$sql->delete('productname', 'monchichi'); echo "<br>";
+$sql->close(); echo "<br>";
 

@@ -9,7 +9,7 @@ class PHPDB implements idatabase{
         
         
         
-	public function __construct(string $dbservername,string $dbname,string $dbusername,string $dbpassword){
+	public function construct(string $dbservername,string $dbname,string $dbusername,string $dbpassword){
             
             if (!file_exists($this->filename)) {
                 $this->fileContent = array( 
@@ -36,10 +36,10 @@ class PHPDB implements idatabase{
     
             if (!(in_array($productname, $this->fileContent))) {
                 array_push($this->fileContent,array('$productname'=>$productname,'price'=>$price,'category'=>$category));
-                echo "Article inserted  ";
+                echo "product inserted  ";
             }
             else {
-                echo "Article already in database";
+                echo "product already in database";
             }
         }
 	
@@ -48,13 +48,16 @@ class PHPDB implements idatabase{
             try {
                 foreach ($this->fileContent as $row) {
                     if(in_array($string, $row)) { 
-                        echo "  Query result( article: ".$row['$productname']."  price: ".$row['price']."  category: ".$row['category'].") ";
+                        echo "  Query result( productname: ".$row['$productname']."  price: ".$row['price']."  category: ".$row['category'].") ";
                      }
                 }
             }
             catch(OutOfBoundsException $exception ){
                 echo 'Query failed '.$exception -> getMessage();	
             }    
+            catch(Exception $exception){
+                echo 'Query failed '.$exception -> getMessage();
+            }
 	}
 	
 	public function delete(string $name, string $string){
@@ -70,6 +73,9 @@ class PHPDB implements idatabase{
             }
             catch(OutOfBoundsException $exception ){
                 echo 'Delete failed '.$exception -> getMessage();	
+            }    
+            catch(Exception $exception){
+                echo 'Delete failed '.$exception -> getMessage();
             }   
 	}
 	

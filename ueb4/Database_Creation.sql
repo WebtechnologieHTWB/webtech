@@ -1,4 +1,3 @@
-
 CREATE DATABASE IF NOT EXISTS gruppe5 CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE gruppe5;
 
@@ -6,7 +5,7 @@ CREATE TABLE IF NOT EXISTS goods(
 		id int(8) NOT NULL AUTO_INCREMENT,
 		productname varchar(64) NOT NULL,
 		price FLOAT NOT NULL,
-		category integer NOT NULL,
+		category varchar(64) NOT NULL,
 		PRIMARY KEY(id)
 	)
 	ENGINE=InnoDB DEFAULT CHARSET=utf8;
